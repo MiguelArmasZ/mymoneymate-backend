@@ -15,6 +15,11 @@ export function setupServer(): void {
   })
 }
 
+app.get('/', (req, res) => {
+  const domain = req.headers.host
+  res.send(`El dominio del servidor es: ${domain}`)
+})
+
 export function routing(): void {
   app.use('/api/user', userRouter)
   app.use('/api/category', categoryRouter)
