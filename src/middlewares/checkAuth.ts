@@ -13,7 +13,7 @@ export async function checkAuth(
 
   if (authorization?.startsWith('Bearer') ?? false) {
     try {
-      const getJWT = authorization?.split(' ').at(1)
+      const getJWT = authorization?.split(' ')[1]
       const { id }: JwtPayload = jwt.verify(
         getJWT ?? '',
         process.env.JWT_SECRET ?? ''
