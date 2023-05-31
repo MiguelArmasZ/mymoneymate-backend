@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 
 const app = express()
-app.use(cors())
+// app.use(cors())
 const PORT = process.env.PORT ?? 4000
 
 export function setupServer(): void {
