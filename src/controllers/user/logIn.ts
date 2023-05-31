@@ -7,9 +7,6 @@ import { ERROR_MESSAGES } from '../../data'
 export async function logIn(req: Request, res: Response): Promise<any> {
   const { email, password: passwordSent }: LogInParams = req.body
 
-  const domain = req.headers.host
-  res.send(`El dominio del servidor es: ${domain}`)
-
   const userToLogIn = await UserModel.findOne(
     { email },
     { userName: 1, email: 1, confirm: 1, password: 1 }

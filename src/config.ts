@@ -3,7 +3,9 @@ import { config as enableEnviromentVars } from 'dotenv'
 import { userRouter, categoryRouter, recordRouter } from './routes'
 import mongoose from 'mongoose'
 import cors from 'cors'
+
 const app = express()
+app.use(cors())
 const PORT = process.env.PORT ?? 4000
 
 export function setupServer(): void {
@@ -14,11 +16,6 @@ export function setupServer(): void {
     console.log(`Server runing in port: ${PORT} 🚀`)
   })
 }
-
-app.get('/', (req, res) => {
-  const domain = req.headers.host
-  res.send(`El dominio del servidor es: ${domain}`)
-})
 
 export function routing(): void {
   app.use('/api/user', userRouter)

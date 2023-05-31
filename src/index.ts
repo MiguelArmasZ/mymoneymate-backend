@@ -1,7 +1,7 @@
-import { DBconnect, corsConfig, routing, setupServer } from './config'
+import { DBconnect, routing, setupServer } from './config'
 
 setupServer()
-corsConfig()
+// corsConfig()
 void DBconnect()
 routing()
 
