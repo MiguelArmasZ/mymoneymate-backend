@@ -35,7 +35,7 @@ export class User {
   @prop({ type: String })
   token: string
 
-  @prop({ type: Boolean, default: false })
+  @prop({ type: Boolean, default: true })
   confirm: boolean
 }
 

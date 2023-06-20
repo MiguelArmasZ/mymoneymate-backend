@@ -3,7 +3,6 @@ import { UserModel } from '../../models/User'
 import { type IUser } from '../../types'
 import {
   createDefaultCategories,
-  generateToken,
   hashingPassword,
   signInEmail,
   thrwoError,
@@ -32,7 +31,7 @@ export async function signIn(req: Request, res: Response): Promise<any> {
 
   try {
     createDefaultCategories(categoriesByDefaultData, newUser._id)
-    newUser.token = generateToken()
+    newUser.token = ''
     await newUser.save()
     void signInEmail({ email, token: newUser.token, userName })
     thrwoSuccess(res, 200, SUCCESS_MESSAGES.EMAIL_TO_CONFIRM_ACCOUNT)

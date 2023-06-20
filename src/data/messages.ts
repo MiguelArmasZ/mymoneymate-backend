@@ -16,8 +16,7 @@ export const SUCCESS_MESSAGES = {
   USER_CONFIRMED: '¡usuario confirmado correctamente! Ya puedes iniciar sesión',
   EMAIL_TO_FORGOT_PASSWORD: 'te hemos enviado un e-mail con las instrucciones',
   PASSWORD_UPDATED: 'contraseña actualizada correctamente',
-  EMAIL_TO_CONFIRM_ACCOUNT:
-    '¡has creado tu cuenta correctamente! Revisa tu e-mail para confirmarla',
+  EMAIL_TO_CONFIRM_ACCOUNT: '¡has creado tu cuenta correctamente!',
 
   CATEGORY_CREATED: 'categoría creada con éxito',
   CATEGORY_UPDATED: 'categoría actualizada con éxito',
